@@ -29,7 +29,7 @@ const Cart = (props) => {
 
   const sumbitOrderHandler = async (userData) => {
     setIsSumbitting(true);
-    await fetch(
+    const response = await fetch(
       "https://react-meals-6c585-default-rtdb.europe-west1.firebasedatabase.app/orders.json",
       {
         method: "POST",
@@ -39,6 +39,17 @@ const Cart = (props) => {
         }),
       }
     );
+    const responseData = await response.json();
+    const newOrder = {
+      id: responseData.name,
+      name: userData.name,
+      street: userData.street,
+      city: userData.city,
+      postalCode: userData.postalCode,
+      orderedItems: cartCtx.items,
+      priceArray: cartCtx.items.map((item) => item.price * item.amount),
+    };
+    props.addOrdersHandler(newOrder);
     setIsSumbitting(false);
     setDidSumbit(true);
     cartCtx.clearCart();

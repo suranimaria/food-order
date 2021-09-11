@@ -9,6 +9,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.eslintcache
 
 # Icon must end with two \r
 
@@ -45,6 +46,7 @@ logs
 \*\*/_.back.\*
 
 node_modules
+build
 bower_components
 
 _.sublime_

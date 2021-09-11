@@ -1,0 +1,59 @@
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.MealsLoading {
+  text-align: center;
+  color: white;
+}
+
+.MealsError {
+  text-align: center;
+  color: red;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px;
+}
+
+.btn {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.4rem 2.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

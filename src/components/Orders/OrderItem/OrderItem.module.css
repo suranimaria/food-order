@@ -1,0 +1,30 @@
+.orderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.orderContainer h3 {
+  margin: 0 0 0.2rem 0;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 150px;
+}
+
+.description {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.totalAmount {
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.2rem;
+}

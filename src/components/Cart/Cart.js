@@ -84,7 +84,7 @@ const Cart = (props) => {
   );
 
   const cartModalContent = (
-    <React.Fragment>
+    <div style={{ height: "500px", overflowY: "scroll" }}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
@@ -94,7 +94,7 @@ const Cart = (props) => {
         <Checkout onConfirm={sumbitOrderHandler} onCancel={props.onClose} />
       )}
       {!isCheckout && modalActions}
-    </React.Fragment>
+    </div>
   );
 
   const isSubmittingModalContent = <p>Sending order data...</p>;
